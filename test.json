@@ -1,0 +1,101 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "example",
+    "description": "example",
+    "version": ""
+  },
+  "host": "127.0.0.1:8080",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/test1": {
+      "post": {
+        "summary": "example",
+        "operationId": "example",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/exampleResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/exampleReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "pay"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "exampleReq": {
+      "type": "object",
+      "properties": {
+        "coverUrl": {
+          "type": "string",
+          "description": " 封面"
+        },
+        "title": {
+          "type": "string",
+          "description": " 专辑名"
+        },
+        "describe": {
+          "type": "string",
+          "description": " 描述"
+        }
+      },
+      "title": "AlbumCreateReq",
+      "required": [
+        "coverUrl",
+        "title",
+        "describe"
+      ]
+    },
+    "exampleResp": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "integer",
+          "format": "int32",
+          "description": " 提交结果"
+        }
+      },
+      "title": "AlbumCreateResp",
+      "required": [
+        "result"
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKey": []
+    }
+  ]
+}
