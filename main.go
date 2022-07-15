@@ -8,7 +8,7 @@ import (
 )
 
 type Swagger struct {
-	Openapi             string                 `json:"openapi"`
+	Swagger             string                 `json:"swagger"`
 	Info                interface{}            `json:"info"`
 	Host                string                 `json:"host"`
 	Schemes             interface{}            `json:"schemes"`
