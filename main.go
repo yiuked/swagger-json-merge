@@ -8,16 +8,16 @@ import (
 )
 
 type Swagger struct {
-	Swagger             string
-	Info                interface{}
-	Host                string
-	Schemes             interface{}
-	Consumes            interface{}
-	Produces            interface{}
-	Paths               map[string]interface{}
-	Definitions         map[string]interface{}
-	SecurityDefinitions interface{}
-	Security            interface{}
+	Swagger             string                 `json:"swagger"`
+	Info                interface{}            `json:"info"`
+	Host                string                 `json:"host"`
+	Schemes             interface{}            `json:"schemes"`
+	Consumes            interface{}            `json:"consumes"`
+	Produces            interface{}            `json:"produces"`
+	Paths               map[string]interface{} `json:"paths"`
+	Definitions         map[string]interface{} `json:"definitions"`
+	SecurityDefinitions interface{}            `json:"securityDefinitions"`
+	Security            interface{}            `json:"security"`
 }
 
 func main() {
